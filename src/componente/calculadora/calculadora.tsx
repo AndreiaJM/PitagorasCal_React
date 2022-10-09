@@ -87,7 +87,7 @@ export default function Calcular() {
                     </form>
                     <h2>{useResp.resultado}</h2>
                 </Box>
-
+                
             </Grid>
         </>
     );
