@@ -1,15 +1,16 @@
 import axios from 'axios'
 import React from 'react'
 
+/*fake api*/
 export const api = axios.create({
     baseURL: 'https://my-json-server.typicode.com/AndreiaJM/fakeapi-teste'
 })
 
-
+/*Requisição post*/
 export const post = async (url: any,dados:any,setDados:any) => {
     const resposta = await api.post(url,dados)
-    calcular(resposta)
-    setDados(resposta.data)
+    calcular(resposta) /*calculado conforme retorno da API*/
+    setDados(resposta.data) /*setando o State*/
 }
 
 //função para realizar o calculo de qualquer um dos lados do teorema de pitagoras
